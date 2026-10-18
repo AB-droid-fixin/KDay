@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f7">
+  <meta name="description" content="A magical birthday garden made especially for Kylie.">
+  <title>Kylie's Magical Birthday Garden</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Visual effects layers -->
+  <div id="sparkleLayer" aria-hidden="true"></div>
+  <div id="confettiContainer" aria-hidden="true"></div>
+
+  <!-- Audio files -->
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="assets/birthday-music.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="trumpetSound" preload="auto">
+    <source src="assets/trumpet.mp3" type="audio/mpeg">
+  </audio>
+
+  <main class="garden">
+    <!-- SCENE 1: WELCOME -->
+    <section id="welcomeScene" class="scene welcome-scene">
+      <div class="floating-decor decor-one" aria-hidden="true">🦋</div>
+      <div class="floating-decor decor-two" aria-hidden="true">🌸</div>
+      <div class="floating-decor decor-three" aria-hidden="true">🌸</div>
+      <div class="floating-decor decor-four" aria-hidden="true">⭐</div>
+
+      <div class="welcome-card">
+        <div class="crown" aria-hidden="true">👑</div>
+        <p class="eyebrow">A LITTLE MAGIC JUST FOR YOU</p>
+        <h1>Kylie's Magical<br>Birthday Garden</h1>
+        <p class="intro">
+          A garden full of wishes, butterflies, and birthday magic
+          is waiting just for you!
+        </p>
+        <div class="flower-row" aria-hidden="true">🌷 🌸 🌼 🌸 🌷</div>
+
+        <button id="enterButton" class="main-button" type="button">
+          Open the Garden ✨
+        </button>
+        <button id="musicButton" class="secondary-button" type="button">
+          🎵 Play Birthday Music
+        </button>
+        <p class="small-note">A special little adventure awaits...</p>
+      </div>
+    </section>
+
+    <!-- SCENE 2: FIVE-STAR GAME -->
+    <section id="gameScene" class="scene game-scene" hidden>
+      <header class="game-header">
+        <div class="mini-crown" aria-hidden="true">👑</div>
+        <p class="eyebrow">KYLIE'S MAGICAL MISSION</p>
+        <h2>Find the Magic Stars!</h2>
+        <p>Five little stars are hiding in the garden. Tap each star to bring the magic back!</p>
+      </header>
+
+      <div class="progress-area">
+        <div id="starProgress" class="star-progress" role="status" aria-live="polite">☆ ☆ ☆ ☆ ☆</div>
+        <p id="progressText">You found 0 out of 5 stars!</p>
+      </div>
+
+      <div id="playGarden" class="play-garden" aria-label="Magical garden game area">
+        <div class="garden-sun" aria-hidden="true">☀️</div>
+        <div class="garden-cloud cloud-one" aria-hidden="true">☁️</div>
+        <div class="garden-cloud cloud-two" aria-hidden="true">☁️</div>
+        <div class="garden-flower flower-one" aria-hidden="true">🌷</div>
+        <div class="garden-flower flower-two" aria-hidden="true">🌼</div>
+        <div class="garden-flower flower-three" aria-hidden="true">🌸</div>
+        <div class="garden-flower flower-four" aria-hidden="true">🌺</div>
+        <div class="garden-flower flower-five" aria-hidden="true">🌷</div>
+        <div class="garden-butterfly butterfly-one" aria-hidden="true">🦋</div>
+        <div class="garden-butterfly butterfly-two" aria-hidden="true">🦋</div>
+        <div class="garden-crown" aria-hidden="true">👑</div>
+        <div id="starContainer"></div>
+      </div>
+
+      <p class="game-hint">💗 Look carefully! The stars are hiding among the flowers.</p>
+      <button id="soundButton" class="secondary-button" type="button" aria-pressed="false">
+        🔔 Star Sounds: Off
+      </button>
+    </section>
+
+    <!-- SCENE 3: BIRTHDAY REVEAL -->
+    <section id="surpriseScene" class="scene surprise-scene" hidden>
+      <div class="surprise-card">
+        <p class="eyebrow">MAGIC RESTORED!</p>
+        <div class="big-crown" aria-hidden="true">👑</div>
+        <div class="cake" aria-hidden="true">🎂</div>
+        <div class="celebration-flowers" aria-hidden="true">🌸 🦋 🌷 ⭐ 🌼</div>
+        <h2>Hooray, Kylie!</h2>
+        <h1>Happy 5th Birthday!</h1>
+        <p class="birthday-message">
+          May your special day be filled with giggles, colorful flowers,
+          magical wishes, sweet surprises, and lots of love!
+        </p>
+        <p class="birthday-wish">Keep sparkling, little birthday star! ✨</p>
+        <div class="flower-row" aria-hidden="true">🌷 🌸 🌼 🌸 🌷</div>
+        <button id="replayButton" class="main-button" type="button">Play Again! 💖</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
